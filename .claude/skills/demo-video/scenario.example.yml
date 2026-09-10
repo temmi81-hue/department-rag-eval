@@ -1,0 +1,19 @@
+url: http://localhost:3001
+output: out/department-demo.mp4
+chapters:
+  - title: 부서 RAG 검색
+    subtitle: 문서를 기반으로 빠르게 답을 찾습니다
+    steps:
+      - wait: 1200
+      - highlight:
+          selector: input[placeholder="검색어를 입력하세요"]
+          duration: 900
+          caption: 검색창에 질문을 입력합니다
+      - type:
+          selector: input[placeholder="검색어를 입력하세요"]
+          text: 휴가 규정을 알려줘
+          delay: 70
+      - click:
+          selector: button[type="submit"]
+          caption: 검색을 실행합니다
+      - wait: 2500

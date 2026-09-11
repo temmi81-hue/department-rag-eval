@@ -8,6 +8,12 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 export const runtime = 'nodejs';
+// Next.js는 라우트 핸들러 안에서 실행되는 fetch() 호출(OpenAI SDK가 내부적으로 사용하는
+// 호출 포함)을 기본적으로 Data Cache에 캐시할 수 있습니다. 이 라우트는 매 요청마다 새로운
+// 질문으로 실제 임베딩 검색과 LLM 호출을 해야 하므로, 캐시된(오래된) 답변이 재사용되지
+// 않도록 이 라우트 전체를 always dynamic으로 표시합니다.
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 let storePromise: Promise<MemoryVectorStore> | undefined;
 let allowedDepartmentsPromise: Promise<string[]> | undefined;
 
@@ -24,10 +30,23 @@ const SCOPE_DOC_KEYWORDS: { keyword: string; department: string; type: string }[
   { keyword: '회계세무그룹', department: '회계세무그룹', type: '재무·회계' }
 ];
 const SCOPE_CATEGORIES = ['투자·공사', '재무·회계'];
+const SCOPE_DEPARTMENTS = [...new Set(SCOPE_DOC_KEYWORDS.map((entry) => entry.department))];
 
 function matchScopeDoc(name: string) {
   const normalized = name.normalize('NFC');
   return SCOPE_DOC_KEYWORDS.find((entry) => normalized.includes(entry.keyword.normalize('NFC')));
+}
+
+// 조직도(260827_조직 및 책임권한 규정)에는 원문을 나눠 받은 흔적("다음 파트에서 계속",
+// "계속 진행할까요?" 같은 생성 중간 스캐폴딩)이 청크로 섞여 있습니다. 실질 내용이 거의
+// 없는 이런 청크는 임베딩 노이즈만 늘리고, 근거로 인용될 경우 사용자에게 그대로 노출되므로
+// 인덱싱 전에 제거합니다.
+function isLowValueChunk(text: string) {
+  const stripped = text
+    .replace(/---\s*\[원문 page-\d+\]\s*---/g, '')
+    .replace(/\(다음 파트에서 계속[^)]*\)/g, '')
+    .trim();
+  return stripped.length < 30 || /계속 진행할까요|GPT-\d/.test(text);
 }
 
 async function buildStore() {
@@ -44,7 +63,7 @@ async function buildStore() {
     })));
   }
   const splitter = new RecursiveCharacterTextSplitter({ chunkSize: 900, chunkOverlap: 120 });
-  const chunks = await splitter.splitDocuments(loaded);
+  const chunks = (await splitter.splitDocuments(loaded)).filter((chunk) => !isLowValueChunk(chunk.pageContent));
   return MemoryVectorStore.fromDocuments(chunks, new OpenAIEmbeddings({ model: 'text-embedding-3-small' }));
 }
 
@@ -75,8 +94,45 @@ export async function POST(request: Request) {
     if (!question) return NextResponse.json({ error: '업무 상황을 입력해 주세요.' }, { status: 400 });
     const store = await getStore();
     const allowedDepartments = await getAllowedDepartments();
-    const retriever = store.asRetriever({ k: Number(process.env.RAG_TOP_K ?? 6) });
-    const docs = await retriever.invoke([question, body.site, body.category].filter(Boolean).join(' / '));
+    // site/category는 UI에서 선택하지 않으면 '미선택'/'자동 분류' placeholder 문자열이 그대로 넘어온다.
+    // 이 값들은 실제 필터가 아니므로 검색 쿼리에 섞으면 임베딩이 오염되어(예: 관련 문서가
+    // top-k에서 밀려남) 정상적으로 근거가 있는 질문도 "추가 확인 필요"로 잘못 판정될 수 있다.
+    const UNSET_FILTER_VALUES = new Set(['미선택', '자동 분류']);
+    const queryParts = [question, body.site, body.category].filter(
+      (part): part is string => Boolean(part) && !UNSET_FILTER_VALUES.has(part)
+    );
+    const queryText = queryParts.join(' / ');
+    const topK = Number(process.env.RAG_TOP_K ?? 6);
+    // 조직도(전사 조직) 문서 하나가 전체 청크의 90% 이상을 차지해서(94/103), 단순 유사도
+    // 검색(top-k든 부서별 분배든 점수순 정렬이든)에 맡기면 근소한 임베딩 점수 차이로 실제
+    // 범위 문서(투자관리그룹 5개, 회계세무그룹 4개 청크뿐)가 통째로 밀리는 현상이 있었습니다
+    // (동일 질문을 반복 호출해도 결과가 들쭉날쭉했음). 반대로 두 문서를 조건 없이 항상 전부
+    // 포함하면, 질문과 무관해도(예: 안전모 미착용) LLM이 매번 눈에 보이는 투자 문서 쪽으로
+    // 답을 만들어내는 문제가 새로 생겼습니다. 그래서 부서별 "최고 유사도 점수"가 최소 기준을
+    // 넘는 경우에만 해당 부서 문서를 통째로 포함합니다: 청크 수가 적어 특정 청크 하나가
+    // 대표성을 갖기 어렵기 때문에, 상위 몇 개가 아니라 부서 전체를 넣거나 아예 뺍니다.
+    const SUPPLEMENTARY_DEPARTMENT = '전사 조직';
+    const primaryDepartments = SCOPE_DEPARTMENTS.filter((department) => department !== SUPPLEMENTARY_DEPARTMENT);
+    const RELEVANCE_THRESHOLD = 0.4;
+    const primaryRelevance = await Promise.all(
+      primaryDepartments.map(async (department) => {
+        const scored = await store.similaritySearchWithScore(queryText, 1, (doc) => doc.metadata.department === department);
+        const score = scored.length ? scored[0][1] : 0;
+        const docs = score >= RELEVANCE_THRESHOLD
+          ? store.memoryVectors
+              .filter((vector) => vector.metadata.department === department)
+              .map((vector) => new Document({ pageContent: vector.content, metadata: vector.metadata }))
+          : [];
+        return { department, score, docs };
+      })
+    );
+    const primaryDocs = primaryRelevance.flatMap((entry) => entry.docs);
+    const orgChartDocs = await store.similaritySearch(
+      queryText,
+      Math.max(1, topK - primaryDocs.length),
+      (doc) => doc.metadata.department === SUPPLEMENTARY_DEPARTMENT
+    );
+    const docs = [...primaryDocs, ...orgChartDocs];
     const context = docs.map((doc, index) => `[근거 ${index + 1}] ${doc.pageContent}\n출처: ${doc.metadata.document}\n부서: ${doc.metadata.department}\n업무 유형: ${doc.metadata.workType}`).join('\n\n');
     const model = new ChatOpenAI({ model: 'gpt-4o-mini', temperature: 0 });
     const response = await model.invoke([
@@ -100,7 +156,27 @@ export async function POST(request: Request) {
     const safePartners = Array.isArray(result.partners)
       ? result.partners.filter((partner: unknown) => typeof partner === 'string' && allowedSet.has(partner) && partner !== safeOwner)
       : [];
-    const safeResult = { ...result, owner: safeOwner, partners: safePartners, needsMoreInfo: ownerAllowed ? result.needsMoreInfo : true };
+    // 온도 0이라도 LLM 호출은 완전히 결정적이지 않습니다. 근거(관련성 임계값을 통과한
+    // primaryDocs)가 이미 확보돼 있는데도 LLM이 가끔 needsMoreInfo:true로 답하는 사례가
+    // 확인되어(동일 질문을 반복하면 결과가 들쭉날쭉함), 서버가 이미 계산해 둔 부서별 관련성
+    // 점수를 신뢰해 owner가 비어 있을 때는 결정적으로 채웁니다. LLM이 owner를 정상적으로
+    // 찾은 경우는 그대로 두고 건드리지 않습니다.
+    const relevantPrimary = primaryRelevance
+      .filter((entry) => entry.docs.length > 0)
+      .sort((a, b) => b.score - a.score);
+    let finalOwner = safeOwner;
+    let finalPartners = safePartners;
+    let finalNeedsMoreInfo = ownerAllowed ? result.needsMoreInfo : true;
+    let finalReason = typeof result.reason === 'string' ? result.reason : '';
+    if (!finalOwner && relevantPrimary.length > 0) {
+      finalOwner = relevantPrimary[0].department;
+      finalNeedsMoreInfo = false;
+      finalPartners = [...new Set([...safePartners, ...relevantPrimary.slice(1).map((entry) => entry.department)])].filter(
+        (partner) => partner !== finalOwner
+      );
+      finalReason = '검색된 지침 근거에서 관련 부서가 확인되어 자동으로 매칭되었습니다.';
+    }
+    const safeResult = { ...result, owner: finalOwner, partners: finalPartners, needsMoreInfo: finalNeedsMoreInfo, reason: finalReason };
     return NextResponse.json({ ...safeResult, retrieved: docs.map((doc) => ({ content: doc.pageContent, ...doc.metadata })) });
   } catch (error) {
     const message = error instanceof Error ? error.message : 'RAG 검색 중 오류가 발생했습니다.';

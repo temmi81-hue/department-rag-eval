@@ -28,5 +28,20 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "typescript": "^5.7.2"
-  }
+  },
+  "version": "1.0.0",
+  "description": "업무 상황을 사내 업무분장·지침 문서에서 검색하고, 검색된 근거를 바탕으로 주관 부서와 협업 부서를 추천하는 Next.js + LangChain 데모입니다. 기존 키워드 기반 추천 화면은 유지됩니다.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/temmi81-hue/department-rag-eval.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/temmi81-hue/department-rag-eval/issues"
+  },
+  "homepage": "https://github.com/temmi81-hue/department-rag-eval#readme"
 }

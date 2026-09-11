@@ -26,6 +26,7 @@ const browser = await chromium.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1920, height: 1080 }, recordVideo: { dir: outDir, size: { width: 1920, height: 1080 } } });
 await context.addInitScript(overlayScript);
 const page = await context.newPage();
+page.setDefaultTimeout(60000); // this app's RAG step calls an LLM and can take ~10-20s
 const video = page.video();
 const sleep = ms => page.waitForTimeout(ms);
 const clickStable = async (selector) => {
@@ -43,6 +44,8 @@ try {
     for (const step of chapter.steps ?? []) { const [kind, value] = Object.entries(step)[0]; const cfg = typeof value === 'object' ? value : { duration:value };
       if (cfg.caption) await show('demo-caption', cfg.caption, 350);
       if (kind === 'wait') await sleep(Number(value));
+      if (kind === 'scroll') { await page.locator(cfg.selector).scrollIntoViewIfNeeded(); await sleep(cfg.duration ?? 1000); }
+      if (kind === 'expand') { await page.locator(cfg.selector).evaluate(el => { el.style.height = 'auto'; el.style.height = `${el.scrollHeight}px`; el.style.overflow = 'hidden'; }); await sleep(cfg.duration ?? 300); }
       if (kind === 'move') await move(cfg.selector);
       if (kind === 'type') { await move(cfg.selector); await page.locator(cfg.selector).click(); await page.locator(cfg.selector).pressSequentially(cfg.text, { delay: cfg.delay ?? 65 }); }
       if (kind === 'click') { const box = await page.locator(cfg.selector).boundingBox().catch(() => null); await clickStable(cfg.selector); if(box) await page.locator('#demo-click').evaluate((e,p)=>{e.style.left=`${p.x}px`;e.style.top=`${p.y}px`;e.style.opacity='1';e.animate([{transform:'translate(-50%,-50%) scale(.5)'},{transform:'translate(-50%,-50%) scale(2)',opacity:0}],{duration:450})},{x:box.x+box.width/2,y:box.y+box.height/2}); await sleep(500); }
@@ -53,7 +56,16 @@ try {
   await context.close(); await browser.close();
   const recordedPath = await video.path();
   await fs.rename(recordedPath, webm);
-  await new Promise((resolve,reject)=>{const p=spawn(ffmpegPath,['-y','-i',webm,'-c:v','libx264','-pix_fmt','yuv420p','-movflags','+faststart',mp4],{stdio:'inherit'});p.on('close',c=>c?reject(new Error(`ffmpeg exited ${c}`)):resolve());});
+  // Encode to a temp path first: on Windows the target mp4 can be held open (OneDrive sync,
+  // a media player, etc.), which makes ffmpeg's direct write fail with EBUSY/"Permission
+  // denied". Renaming a temp file over an existing, locked target can also fail (EPERM), so
+  // move the old file aside before swapping the new one in, and clean the old one up after.
+  const mp4Tmp = `${mp4}.tmp-${stamp}.mp4`;
+  await new Promise((resolve,reject)=>{const p=spawn(ffmpegPath,['-y','-i',webm,'-c:v','libx264','-pix_fmt','yuv420p','-movflags','+faststart',mp4Tmp],{stdio:'inherit'});p.on('close',c=>c?reject(new Error(`ffmpeg exited ${c}`)):resolve());});
+  const mp4Old = `${mp4}.old-${stamp}.mp4`;
+  const hadPrevious = await fs.rename(mp4, mp4Old).then(() => true).catch(() => false);
+  await fs.rename(mp4Tmp, mp4);
+  if (hadPrevious) await fs.rm(mp4Old, { force: true }).catch(() => {});
   console.log(`Created ${mp4}`);
 } catch (error) {
   const failure = path.join(outDir, `failure-${stamp}.png`); await page.screenshot({ path: failure }).catch(()=>{}); await context.close().catch(()=>{}); await browser.close().catch(()=>{}); console.error(`Failed. Screenshot: ${failure}`); throw error;

@@ -1,12 +1,7 @@
-# 약 60초 본편 + 10초 채팅용 GIF 설정
-url: http://localhost:3000
-output: out/department-workflow-demo.mp4
-gif:
-  enabled: true
-  output: out/department-workflow-chat.gif
-  duration: 10
-  fps: 10
-  scale: 960:-1
+# 약 60초 본편 데모 — Compliance Hub까지 포함 (결과보고서 첨부용)
+# 오프닝 카드 + 챕터 4개(검색/결과확인/메일전송/진행현황) + 엔딩 카드(Compliance Hub)
+url: http://localhost:3100
+output: out/department-workflow-demo-compliance-hub.mp4
 
 chapters:
   # 오프닝 카드
@@ -33,16 +28,16 @@ chapters:
       - click:
           selector: 'button:has-text("부서 찾기")'
           caption: 부서 찾기를 눌러 검색합니다
-      - wait: 2200
+      - wait: 1500
 
   - title: 2. 결과 확인 및 부서 선택
     subtitle: RAG 근거로 추천 부서를 확인하고 협업 요청 대상을 고릅니다
     steps:
       - highlight:
           selector: '.rag-panel'
-          duration: 1400
-          caption: LangChain RAG 근거로 추천 부서와 협업 부서를 확인합니다
-      - wait: 900
+          duration: 1100
+          caption: 추천 부서와 협업 부서를 확인합니다
+      - wait: 500
       - scroll:
           selector: '.result-grid'
           duration: 800
@@ -73,8 +68,8 @@ chapters:
           selector: '.draft textarea[aria-label="검토 요청 초안"]'
       - highlight:
           selector: '.draft textarea[aria-label="검토 요청 초안"]'
-          duration: 1800
-          caption: 요청 사항 1~4번까지 자동으로 정리됩니다
+          duration: 1600
+          caption: 요청 사항이 자동으로 정리됩니다
       - scroll:
           selector: '.send-button'
           duration: 700
@@ -83,23 +78,45 @@ chapters:
           caption: 메일 보내기를 눌러 검토를 요청합니다
       - wait: 1800
 
-  # 엔딩 카드
-  - title: 업무 요청 완료
-    subtitle: 근거 확인부터 이메일 요청과 회신 상태까지 한 흐름으로 관리
+  - title: 4. 협업 진행 현황 관리
+    subtitle: 메일 발송부터 회신 완료까지 진행 상태를 한 화면에서 확인합니다
     steps:
-      - wait: 1400
       - scroll:
           selector: '.request-tracker'
           duration: 900
       - highlight:
           selector: '.request-tracker'
-          duration: 1100
-          caption: 현업 확인 현황을 확인합니다
+          duration: 1200
+          caption: 업무 요청 완료 현황을 확인합니다
       - click:
           selector: '.reply-tab'
           caption: 담당부서 접수 확인 · 검토중으로 변경합니다
-      - wait: 1100
+      - wait: 1000
       - click:
           selector: '.reply-tab'
           caption: 현업 담당자 확인 후 회신 완료로 변경합니다
-      - wait: 1500
+      - wait: 1300
+
+  # 엔딩 카드
+  - title: Compliance Hub
+    subtitle: 참고 문서와 협업 요청 이력을 한 곳에서 관리합니다
+    steps:
+      - click:
+          selector: 'nav.nav-links a:has-text("Compliance Hub")'
+          caption: Compliance Hub로 이동합니다
+      - wait: 800
+      - scroll:
+          selector: '.document-list'
+          duration: 800
+          caption: 참고 문서 목록을 확인합니다
+      - highlight:
+          selector: '.document-list'
+          duration: 900
+      - scroll:
+          selector: '.request-log'
+          duration: 800
+          caption: 협업 요청 이력을 확인합니다
+      - highlight:
+          selector: '.request-log'
+          duration: 1400
+      - wait: 1000

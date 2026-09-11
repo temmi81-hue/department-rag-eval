@@ -7,6 +7,9 @@
 .next/
 out/
 
+# 런타임에 쌓이는 로컬 데이터 (Compliance Hub 협업 요청 이력 등)
+/data/
+
 # dependencies
 node_modules/
 

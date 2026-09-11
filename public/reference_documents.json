@@ -1,0 +1,11 @@
+{
+  "notice": "RAG 검색과 업무분장 근거가 참조하는 원본 지침 문서 목록입니다. 데모 범위(투자·공사, 재무·회계, 구매·자재)에 한정됩니다.",
+  "documents": [
+    { "document": "260827_조직 및 책임권한 규정_업무분장_더미파일.docx", "department": "전사 조직", "workType": "업무분장" },
+    { "document": "투자관리그룹_5억 이상 타당성 평가 및 심의 지침_과제용.docx", "department": "투자관리그룹", "workType": "투자·공사" },
+    { "document": "투자관리그룹_5억 이상 타당성 평가 및 심의 지침 적용대상 해설(생산설비 신규구매 포함)_과제용.docx", "department": "투자관리그룹", "workType": "투자·공사" },
+    { "document": "설비자재구매그룹_구매관리규정_과제용.docx", "department": "설비자재구매그룹", "workType": "구매·자재" },
+    { "document": "설비자재구매그룹_타당성 검토 및 자료 작성(설비도입·장비투자) 업무지침_과제용.docx", "department": "설비자재구매그룹", "workType": "구매·자재" },
+    { "document": "회계세무그룹_회계관리규정_과제용.docx", "department": "회계세무그룹", "workType": "재무·회계" }
+  ]
+}

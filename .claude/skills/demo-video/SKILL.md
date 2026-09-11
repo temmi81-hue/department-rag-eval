@@ -19,7 +19,7 @@ The script records at 1920x1080, injects all presentation overlays with `addInit
 
 ## Scenario contract
 
-The YAML has `url`, optional `output`, and an ordered `chapters` list. Each chapter may have `title`, `subtitle`, and `steps`. Steps support `wait`, `click` (`selector`), `type` (`selector`, `text`, optional `delay`), `highlight` (`selector`, optional `duration`), `move` (`selector`), and `screenshot` (`name`). Optional step `caption` is shown as a lower-third subtitle; `click` also creates a visible click ring. Selectors are standard Playwright selectors. The included `scenario.example.yml` is the canonical minimal example.
+The YAML has `url`, optional `output`, and an ordered `chapters` list. Each chapter may have `title`, `subtitle`, and `steps`. Steps support `wait`, `click` (`selector`), `type` (`selector`, `text`, optional `delay`), `highlight` (`selector`, optional `duration`), `move` (`selector`), `scroll` (`selector`, optional `duration`), `expand` (`selector`, optional `duration`), and `screenshot` (`name`). Optional step `caption` is shown as a lower-third subtitle; `click` also creates a visible click ring. `expand` grows a scrollable element (e.g. a `<textarea>` whose CSS caps its height) to fit its full content — `el.style.height = el.scrollHeight + 'px'` — so internal overflow doesn't hide content from the recording; use it before `highlight`/`scroll` on a textarea or panel whose content is taller than its visible box. Selectors are standard Playwright selectors. The included `scenario.example.yml` is the canonical minimal example.
 
 ## Invariants
 

@@ -26,6 +26,7 @@ const browser = await chromium.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1920, height: 1080 }, recordVideo: { dir: outDir, size: { width: 1920, height: 1080 } } });
 await context.addInitScript(overlayScript);
 const page = await context.newPage();
+page.setDefaultTimeout(60000); // this app's RAG step calls an LLM and can take ~10-20s
 const video = page.video();
 const sleep = ms => page.waitForTimeout(ms);
 const clickStable = async (selector) => {

@@ -1,0 +1,167 @@
+{"kind":"deck","id":"pr/dtvpd3","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"","type":"master","placeholders":[{"name":"title","type":"title","textPreview":"마스터 제목 스타일 편집"},{"name":"body","type":"body","textPreview":"마스터 텍스트 스타일을 편집합니다 | 둘째 수준 | 셋째 수준 | 넷째 수준 | 다섯째 수준"},{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"제목 슬라이드","type":"title","placeholders":[{"name":"title","type":"title","textPreview":"마스터 제목 스타일 편집"},{"name":"subtitle","type":"subtitle","textPreview":"클릭하여 마스터 부제목 스타일 편집"},{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout2.xml","name":"제목 및 내용","type":"obj","placeholders":[{"name":"title","type":"title","textPreview":"마스터 제목 스타일 편집"},{"name":"content placeholder 2","textPreview":"마스터 텍스트 스타일 편집 | 둘째 수준 | 셋째 수준 | 넷째 수준 | 다섯째 수준"},{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout3.xml","name":"구역 머리글","type":"secHead","placeholders":[{"name":"title","type":"title","textPreview":"마스터 제목 스타일 편집"},{"name":"body","type":"body","textPreview":"마스터 텍스트 스타일 편집"},{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout4.xml","name":"콘텐츠 2개","type":"twoObj","placeholders":[{"name":"title","type":"title","textPreview":"마스터 제목 스타일 편집"},{"name":"content placeholder 2","textPreview":"마스터 텍스트 스타일 편집 | 둘째 수준 | 셋째 수준 | 넷째 수준 | 다섯째 수준"},{"name":"content placeholder 3","textPreview":"마스터 텍스트 스타일 편집 | 둘째 수준 | 셋째 수준 | 넷째 수준 | 다섯째 수준"},{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout5.xml","name":"비교","type":"twoTxTwoObj","placeholders":[{"name":"title","type":"title","textPreview":"마스터 제목 스타일 편집"},{"name":"body","type":"body","textPreview":"마스터 텍스트 스타일 편집"},{"name":"content placeholder 3","textPreview":"마스터 텍스트 스타일 편집 | 둘째 수준 | 셋째 수준 | 넷째 수준 | 다섯째 수준"},{"name":"body","type":"body","textPreview":"마스터 텍스트 스타일 편집"},{"name":"content placeholder 5","textPreview":"마스터 텍스트 스타일 편집 | 둘째 수준 | 셋째 수준 | 넷째 수준 | 다섯째 수준"},{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout6.xml","name":"제목만","type":"titleOnly","placeholders":[{"name":"title","type":"title","textPreview":"마스터 제목 스타일 편집"},{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout7.xml","name":"빈 화면","type":"blank","placeholders":[{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout8.xml","name":"캡션 있는 콘텐츠","type":"objTx","placeholders":[{"name":"title","type":"title","textPreview":"마스터 제목 스타일 편집"},{"name":"content placeholder 2","textPreview":"마스터 텍스트 스타일 편집 | 둘째 수준 | 셋째 수준 | 넷째 수준 | 다섯째 수준"},{"name":"body","type":"body","textPreview":"마스터 텍스트 스타일 편집"},{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout9.xml","name":"캡션 있는 그림","type":"picTx","placeholders":[{"name":"title","type":"title","textPreview":"마스터 제목 스타일 편집"},{"name":"picture","type":"picture","textPreview":"그림을 추가하려면 아이콘을 클릭하십시오"},{"name":"body","type":"body","textPreview":"마스터 텍스트 스타일 편집"},{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout10.xml","name":"제목 및 세로 텍스트","type":"vertTx","placeholders":[{"name":"title","type":"title","textPreview":"마스터 제목 스타일 편집"},{"name":"body","type":"body","textPreview":"마스터 텍스트 스타일 편집 | 둘째 수준 | 셋째 수준 | 넷째 수준 | 다섯째 수준"},{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout11.xml","name":"세로 제목 및 텍스트","type":"vertTitleAndTx","placeholders":[{"name":"title","type":"title","textPreview":"마스터 제목 스타일 편집"},{"name":"body","type":"body","textPreview":"마스터 텍스트 스타일 편집 | 둘째 수준 | 셋째 수준 | 넷째 수준 | 다섯째 수준"},{"name":"dateTime","type":"dateTime","textPreview":"2026-09-10"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"’26. 9. 16.","textShapes":4}
+{"kind":"shape","id":"sh/547294r6","slide":1,"name":"제목 1","placeholder":"title","bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"name":"Rectangle 3","text":"’26. 9. 16.","textPreview":"’26. 9. 16.","textChars":11,"textLines":1,"bbox":[467.54,580.98,147.4,36.62]}
+{"kind":"textbox","id":"sh/sryl4zqx","slide":1,"name":"Rectangle 4","text":"포스코퓨처엠 송다혜","textPreview":"포스코퓨처엠 송다혜","textChars":10,"textLines":1,"bbox":[300.78,636.68,480.94,36.94]}
+{"kind":"textbox","id":"sh/ul4vaxgb","slide":1,"name":"Text Box 9","text":"      업무 상황을 입력하면,\n      필요한 절차와 협업 부서를 안내합니다.","textPreview":"업무 상황을 입력하면, |       필요한 절차와 협업 부서를 안내합니다.","textChars":46,"textLines":2,"bbox":[-0.22,227.99,1040.22,145.85]}
+{"kind":"textbox","id":"sh/fu94fe98","slide":1,"name":"TextBox 7","text":"[업무 지침 네비게이터]","textPreview":"[업무 지침 네비게이터]","textChars":13,"textLines":1,"bbox":[86.51,187.1,289.05,38.78]}
+{"kind":"image","id":"im/kr6xgnu5","slide":1,"name":"Picture 1","bbox":[0,0,1040,720]}
+{"kind":"image","id":"im/bmxw3ido","slide":1,"name":"Picture 2","bbox":[913.65,21.64,110.69,43.97]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":""}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"내용 확인, 업무 처리","textShapes":17}
+{"kind":"textbox","id":"sh/xcrupg3u","slide":2,"name":"사각형: 둥근 모서리 36","text":"           내용 확인, 업무 처리","textPreview":"내용 확인, 업무 처리","textChars":23,"textLines":1,"bbox":[764.7,540.44,250.51,50.23]}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"name":"TextBox 3","text":"1. 입력만으로 필요 절차와 지침을 한 번에, 『업무 지침 네비게이터』","textPreview":"1. 입력만으로 필요 절차와 지침을 한 번에, 『업무 지침 네비게이터』","textChars":39,"textLines":1,"bbox":[19.09,12.48,869.43,42.01]}
+{"kind":"textbox","id":"sh/w3i1sfa9","slide":2,"name":"직사각형 6","text":"검토 배경: 누구나 필요한 업무 프로세스를 쉽게 이해하고, 안정적으로 이행할 수 있는 지원 필요","textPreview":"검토 배경: 누구나 필요한 업무 프로세스를 쉽게 이해하고, 안정적으로 이행할 수 있는 지원 필요","textChars":53,"textLines":1,"bbox":[58.4,74.46,827.94,41.99]}
+{"kind":"shape","id":"sh/q5wjelsz","slide":2,"name":"모서리가 둥근 직사각형 320","bbox":[32.59,86,20.4,18.9]}
+{"kind":"textbox","id":"sh/cnupgny5","slide":2,"name":"직사각형 17","text":"추진 방향: 담당자의 경험과 개별 탐색 방식에서 업무별 처리 절차와 지침을 한 번에 안내하는 방식으로 전환","textPreview":"추진 방향: 담당자의 경험과 개별 탐색 방식에서 업무별 처리 절차와 지침을 한 번에 안내하는 방식으로 전환","textChars":59,"textLines":1,"bbox":[58.4,451.44,967.8,42.67]}
+{"kind":"shape","id":"sh/t8byxkn2","slide":2,"name":"모서리가 둥근 직사각형 320","bbox":[32.59,462.99,20.4,18.9]}
+{"kind":"textbox","id":"sh/65kfmpor","slide":2,"name":"사각형: 둥근 모서리 22","text":"            업무 입력","textPreview":"업무 입력","textChars":17,"textLines":1,"bbox":[48.56,540.44,236.44,50.23]}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"name":"사각형: 둥근 모서리 1","text":"사용자","textPreview":"사용자","textChars":3,"textLines":1,"bbox":[49.3,521.91,68,24]}
+{"kind":"textbox","id":"sh/fadgzu58","slide":2,"name":"사각형: 둥근 모서리 25","text":"             키워드, 업무 유형 분석            절차, 지침 안내                    ","textPreview":"키워드, 업무 유형 분석            절차, 지침 안내","textChars":67,"textLines":1,"bbox":[304.89,540.44,440.16,50.23]}
+{"kind":"textbox","id":"sh/u94fqp4n","slide":2,"name":"사각형: 둥근 모서리 26","text":"서비스","textPreview":"서비스","textChars":3,"textLines":1,"bbox":[304.89,521.91,68,24]}
+{"kind":"textbox","id":"sh/id0vylkf","slide":2,"name":"사각형: 둥근 모서리 37","text":"사용자","textPreview":"사용자","textChars":3,"textLines":1,"bbox":[764.7,521.91,68,24]}
+{"kind":"textbox","id":"sh/9o7ulg3y","slide":2,"name":"직사각형 32","text":"필요한 지침을 빠르게 찾아, 시작부터 완료까지 정확하게 업무를 처리하도록 체계적으로 지원","textPreview":"필요한 지침을 빠르게 찾아, 시작부터 완료까지 정확하게 업무를 처리하도록 체계적으로 지원","textChars":49,"textLines":1,"bbox":[42.04,628.67,975.28,53.05]}
+{"kind":"shape","id":"sh/ru5cbqd4","slide":2,"name":"타원 39","bbox":[52.83,632.55,43.8,45.3]}
+{"kind":"shape","id":"sh/69wbilcj","slide":2,"name":"화살표: 오른쪽 40","bbox":[42.9,634.68,53.5,41.03]}
+{"kind":"shape","id":"sh/jix0niho","slide":2,"name":"사각형: 둥근 모서리 61","bbox":[34.7,505.8,987.87,104.9]}
+{"kind":"shape","id":"sh/xgfil8zy","slide":2,"name":"이등변 삼각형 63","bbox":[286.71,559.41,17.44,12.68]}
+{"kind":"shape","id":"sh/wf6hcnyd","slide":2,"name":"이등변 삼각형 64","bbox":[745.79,559.58,17.44,12.68]}
+{"kind":"shape","id":"sh/ozy1ofad","slide":2,"name":"사각형: 둥근 모서리 2","bbox":[34.7,127.85,313.43,302.51]}
+{"kind":"shape","id":"sh/exgvmlcv","slide":2,"name":"사각형: 둥근 모서리 44","bbox":[370.35,127.85,313.43,302.51]}
+{"kind":"shape","id":"sh/107uh0v6","slide":2,"name":"사각형: 둥근 모서리 45","bbox":[707.02,127.85,313.43,302.51]}
+{"kind":"textbox","id":"sh/mtwrmxg7","slide":2,"name":"TextBox 11","text":"회사 업무","textPreview":"회사 업무","textChars":5,"textLines":1,"bbox":[59.08,140.25,264.66,33.93]}
+{"kind":"shape","id":"sh/wjy9sry9","slide":2,"name":"직선 연결선 13","bbox":[49.4,180.4,284.02,0]}
+{"kind":"textbox","id":"sh/0vq1o36x","slide":2,"name":"TextBox 49","text":"문제점","textPreview":"문제점","textChars":3,"textLines":1,"bbox":[396.84,144.65,264.66,33.93]}
+{"kind":"shape","id":"sh/et8zmto7","slide":2,"name":"직선 연결선 51","bbox":[387.16,184.79,284.02,0]}
+{"kind":"textbox","id":"sh/r6x0rypg","slide":2,"name":"TextBox 56","text":"개선 방안","textPreview":"개선 방안","textChars":5,"textLines":1,"bbox":[731.41,143.77,264.66,33.93]}
+{"kind":"shape","id":"sh/5kfipszu","slide":2,"name":"직선 연결선 59","bbox":[721.73,183.91,284.02,0]}
+{"kind":"textbox","id":"sh/je9crql0","slide":2,"name":"TextBox 38","text":" 정해진 프로세스와 절차에 따라 처리\n 담당자가 바뀌어도 필수 절차 준수\n 일관된 결과물 확보","textPreview":"정해진 프로세스와 절차에 따라 처리 |  담당자가 바뀌어도 필수 절차 준수 |  일관된 결과물 확보","textChars":52,"textLines":3,"bbox":[36.66,314.52,313.43,99.63]}
+{"kind":"textbox","id":"sh/svedkvup","slide":2,"name":"TextBox 42","text":" 필요한 절차와 지침을 찾는데 시간 소요\n 담당자마다 처리 방식이 다름\n 업무 누락과 편차 발생","textPreview":"필요한 절차와 지침을 찾는데 시간 소요 |  담당자마다 처리 방식이 다름 |  업무 누락과 편차 발생","textChars":53,"textLines":3,"bbox":[370.35,314.52,326.97,99.63]}
+{"kind":"textbox","id":"sh/1wzix87i","slide":2,"name":"TextBox 50","text":" 수행하려는 업무를 입력하면 \n   처리 절차와 지침을 쉽게 안내하는\n   『업무 지침 네비게이터』 구축","textPreview":"수행하려는 업무를 입력하면  |    처리 절차와 지침을 쉽게 안내하는 |    『업무 지침 네비게이터』 구축","textChars":58,"textLines":3,"bbox":[707.02,314.52,313.43,86.17]}
+{"kind":"textbox","id":"sh/q5ozitov","slide":2,"name":"TextBox 55","text":"(1/4)","textPreview":"(1/4)","textChars":5,"textLines":1,"bbox":[923.14,29.71,114.57,32.31]}
+{"kind":"image","id":"im/gbeh4je5","slide":2,"name":"그림 9","geometry":"roundRect","bbox":[33.11,86.53,19.45,18.37]}
+{"kind":"image","id":"im/1cnixofq","slide":2,"name":"그림 20","geometry":"roundRect","bbox":[33.11,463.52,19.45,18.37]}
+{"kind":"image","id":"im/65czy9w3","slide":2,"name":"그래픽 4","bbox":[769.81,543.41,55.15,46.57]}
+{"kind":"image","id":"im/r6l0rexo","slide":2,"name":"그래픽 23","bbox":[51.93,535.61,62.74,62.74]}
+{"kind":"image","id":"im/90b2dcz6","slide":2,"name":"그래픽 28","bbox":[556.96,542.49,44.68,44.68]}
+{"kind":"image","id":"im/8z2l47yl","slide":2,"name":"그래픽 30","bbox":[316.55,545.52,44.68,44.68]}
+{"kind":"image","id":"im/7ytkb2h0","slide":2,"name":"그래픽 12","bbox":[154.91,205.68,79.34,79.34]}
+{"kind":"image","id":"im/mxk32xgf","slide":2,"name":"그래픽 15","bbox":[482.72,205.68,79.34,79.34]}
+{"kind":"image","id":"im/lwr29szu","slide":2,"name":"그림 33","bbox":[764.03,190.53,199.41,112.23]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":""}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"주요 적용 : Document Loading → Text Splitter → Metadata 구성 → Embedding → Rag 기반 질의응답","textShapes":18}
+{"kind":"textbox","id":"sh/po3ilcvm","slide":3,"name":"직사각형 40","text":"주요 적용 : Document Loading → Text Splitter → Metadata 구성 → Embedding → Rag 기반 질의응답    ","textPreview":"주요 적용 : Document Loading → Text Splitter → Metadata 구성 → Embedding → Rag 기반 질의응답","textChars":84,"textLines":1,"bbox":[28.31,624.43,989.04,77.25]}
+{"kind":"shape","id":"sh/f29gbyx0","slide":3,"name":"타원 20","bbox":[66.92,661.38,38.88,38.62]}
+{"kind":"shape","id":"sh/cf6xcn2l","slide":3,"name":"화살표: 오각형 65","bbox":[721.07,124.34,287.48,55.88]}
+{"kind":"shape","id":"sh/psfeh83u","slide":3,"name":"화살표: 오각형 62","bbox":[498.05,124.51,252.23,55.88]}
+{"kind":"textbox","id":"sh/298ryl4v","slide":3,"name":"TextBox 3","text":"2. 규칙 기반 구현에서 RAG 적용 시도, AI 활용 고도화","textPreview":"2. 규칙 기반 구현에서 RAG 적용 시도, AI 활용 고도화","textChars":34,"textLines":1,"bbox":[19.09,12.48,869.43,42.01]}
+{"kind":"textbox","id":"sh/rql0nmds","slide":3,"name":"직사각형 46","text":"개발 과정","textPreview":"개발 과정","textChars":5,"textLines":1,"bbox":[58.4,73.72,553.47,41.99]}
+{"kind":"shape","id":"sh/1wnitwvu","slide":3,"name":"모서리가 둥근 직사각형 320","bbox":[32.59,86.36,20.4,18.9]}
+{"kind":"textbox","id":"sh/2p4f6dk3","slide":3,"name":"TextBox 59","text":"(2/4)","textPreview":"(2/4)","textChars":5,"textLines":1,"bbox":[923.14,29.71,114.57,32.31]}
+{"kind":"shape","id":"sh/3qxwfilo","slide":3,"name":"화살표: 오각형 60","bbox":[276.33,124.51,252.23,55.88]}
+{"kind":"shape","id":"sh/v6l4jq94","slide":3,"name":"화살표: 오각형 13","bbox":[28.28,124.51,279.63,55.88]}
+{"kind":"textbox","id":"sh/a5c3ql8z","slide":3,"name":"TextBox 14","text":"문제 정의","textPreview":"문제 정의","textChars":5,"textLines":1,"bbox":[115.98,135.49,143.47,33.93]}
+{"kind":"textbox","id":"sh/dgfyls3q","slide":3,"name":"TextBox 66","text":"시스템 구현","textPreview":"시스템 구현","textChars":6,"textLines":1,"bbox":[364.07,135.49,143.47,33.93]}
+{"kind":"textbox","id":"sh/7idw7ylg","slide":3,"name":"TextBox 68","text":"샘플링 테스트","textPreview":"샘플링 테스트","textChars":7,"textLines":1,"bbox":[578.13,135.49,160.8,33.93]}
+{"kind":"textbox","id":"sh/8bahkrmt","slide":3,"name":"TextBox 70","text":"시스템 검증","textPreview":"시스템 검증","textChars":6,"textLines":1,"bbox":[821.5,135.49,160.8,33.93]}
+{"kind":"shape","id":"sh/03ix43e5","slide":3,"name":"사각형: 둥근 모서리 21","bbox":[29.3,194.11,234.87,198.33]}
+{"kind":"textbox","id":"sh/d0jax03i","slide":3,"name":"사각형: 둥근 모서리 2","text":"① 범위 및 대표부서 선정","textPreview":"① 범위 및 대표부서 선정","textChars":14,"textLines":1,"bbox":[29.3,194.11,234.87,55.88]}
+{"kind":"shape","id":"sh/14ryd8fq","slide":3,"name":"사각형: 둥근 모서리 22","bbox":[277.43,193.84,234.87,198.33]}
+{"kind":"textbox","id":"sh/6d0fytg3","slide":3,"name":"사각형: 둥근 모서리 23","text":"② 검증 데이터 확보","textPreview":"② 검증 데이터 확보","textChars":11,"textLines":1,"bbox":[277.43,193.84,234.87,55.88]}
+{"kind":"shape","id":"sh/sfix03y9","slide":3,"name":"사각형: 둥근 모서리 25","bbox":[525.55,193.84,234.87,198.33]}
+{"kind":"textbox","id":"sh/tgry9ofu","slide":3,"name":"사각형: 둥근 모서리 26","text":"③ 대표 질의 선정","textPreview":"③ 대표 질의 선정","textChars":10,"textLines":1,"bbox":[525.55,193.84,234.87,55.88]}
+{"kind":"shape","id":"sh/a9kfadwn","slide":3,"name":"사각형: 둥근 모서리 27","bbox":[773.68,193.84,234.87,198.33]}
+{"kind":"textbox","id":"sh/batgjixs","slide":3,"name":"사각형: 둥근 모서리 28","text":"④ 정확성 검토 및 보완","textPreview":"④ 정확성 검토 및 보완","textChars":13,"textLines":1,"bbox":[773.68,193.84,234.87,55.88]}
+{"kind":"textbox","id":"sh/y14jehgj","slide":3,"name":"TextBox 32","text":" 사규, 정책, 프로세스 등 \n   회사 문서 3,450여개 \n 조직 126개 (섹션, 팀 제외)\n 업무 특성, 협업빈도 기준 \n   대표부서 선정 (10 → 35개)","textPreview":"사규, 정책, 프로세스 등  |    회사 문서 3,450여개  |  조직 126개 (섹션, 팀 제외) |  업무 특성, 협업빈도 기준  |    대표부서 선정 (10 → 35개)","textChars":93,"textLines":5,"bbox":[29.42,256.17,234.87,140.29]}
+{"kind":"textbox","id":"sh/x0vi5czy","slide":3,"name":"TextBox 33","text":" 업무 절차, 관련 지침, 조직\n   정보 수집 \n P-GPT 활용 더미 데이터 생성","textPreview":"업무 절차, 관련 지침, 조직 |    정보 수집  |  P-GPT 활용 더미 데이터 생성","textChars":47,"textLines":3,"bbox":[277.43,280.69,253.73,92.9]}
+{"kind":"textbox","id":"sh/byd032h8","slide":3,"name":"TextBox 35","text":" 사용자 중심 대표 질의 검토\n 웹서비스 검색 결과 확인","textPreview":"사용자 중심 대표 질의 검토 |  웹서비스 검색 결과 확인","textChars":31,"textLines":2,"bbox":[525.51,280.69,248.16,65.16]}
+{"kind":"textbox","id":"sh/ax4zax0n","slide":3,"name":"TextBox 36","text":" 질의와 결과 반복 검증\n 서비스 정확도 개선\n 검색 편중 확인 \n → 투자〮회계 9개 부서로 조정","textPreview":"질의와 결과 반복 검증 |  서비스 정확도 개선 |  검색 편중 확인  |  → 투자〮회계 9개 부서로 조정","textChars":55,"textLines":4,"bbox":[772.59,262.15,248.16,127.37]}
+{"kind":"shape","id":"sh/m1c3mlsn","slide":3,"name":"연결선: 꺾임 10","bbox":[767.05,268.1,1.33,248.13]}
+{"kind":"textbox","id":"sh/943mhgre","slide":3,"name":"TextBox 11","text":"반복 검증","textPreview":"반복 검증","textChars":5,"textLines":1,"bbox":[706.97,398.86,119.57,32.31]}
+{"kind":"shape","id":"sh/83ulovat","slide":3,"name":"직사각형 12","bbox":[32.62,629.19,11.72,67.04]}
+{"kind":"textbox","id":"sh/ja54na9g","slide":3,"name":"TextBox 17","text":"정확도 검증은 투자·공사, 재무·회계 업무(9개 부서) 중심으로 우선 진행","textPreview":"정확도 검증은 투자·공사, 재무·회계 업무(9개 부서) 중심으로 우선 진행","textChars":41,"textLines":1,"bbox":[102.55,665.83,856.84,33.93]}
+{"kind":"table","id":"tb/5436tk7q","slide":3,"name":"표 9","rows":6,"cols":3,"preview":"구 분 | (2주차) 1차 서버 - 규칙 기반 | (3주차) 2차 서버 - LangChain 기반 RAG","bbox":[31.53,435.02,977.02,164.56]}
+{"kind":"image","id":"im/srm94z61","slide":3,"name":"그림 50","geometry":"roundRect","bbox":[33.11,86.88,19.45,18.37]}
+{"kind":"image","id":"im/tsvax4n6","slide":3,"name":"그래픽 16","bbox":[59.56,128.46,48,48]}
+{"kind":"image","id":"im/et4r69or","slide":3,"name":"그래픽 24","bbox":[310.24,123.87,57.18,57.18]}
+{"kind":"image","id":"im/fudsze5c","slide":3,"name":"그래픽 29","bbox":[761.68,121.69,61.54,61.54]}
+{"kind":"image","id":"im/gvm98j6x","slide":3,"name":"그래픽 34","bbox":[535.38,130.06,44.78,44.78]}
+{"kind":"image","id":"im/ux0ru5on","slide":3,"name":"그래픽 19","bbox":[69.53,663.87,33.65,33.65]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":""}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"3. 업무 입력부터 협업 요청까지 연결","textShapes":19}
+{"kind":"textbox","id":"sh/rm1k7yt4","slide":4,"name":"TextBox 3","text":"3. 업무 입력부터 협업 요청까지 연결 ","textPreview":"3. 업무 입력부터 협업 요청까지 연결","textChars":22,"textLines":1,"bbox":[19.09,12.48,869.43,42.01]}
+{"kind":"textbox","id":"sh/5ony1oj6","slide":4,"name":"TextBox 32","text":"(3/4)","textPreview":"(3/4)","textChars":5,"textLines":1,"bbox":[923.14,29.71,114.57,32.31]}
+{"kind":"textbox","id":"sh/fm5c3q54","slide":4,"name":"사각형: 둥근 모서리 39","text":"1.업무 입력","textPreview":"1.업무 입력","textChars":7,"textLines":1,"bbox":[446.95,159.53,173.98,42.67]}
+{"kind":"textbox","id":"sh/elwba54j","slide":4,"name":"사각형: 둥근 모서리 40","text":"2.절차〮부서 확인","textPreview":"2.절차〮부서 확인","textChars":10,"textLines":1,"bbox":[446.95,244.1,173.98,42.67]}
+{"kind":"textbox","id":"sh/18nu50nu","slide":4,"name":"사각형: 둥근 모서리 41","text":"3.협업 요청","textPreview":"3.협업 요청","textChars":7,"textLines":1,"bbox":[446.95,334.45,173.98,42.67]}
+{"kind":"textbox","id":"sh/rilczq5s","slide":4,"name":"TextBox 43","text":" 업무 내용을 자연어로 입력\n 사업장과 업무 유형 선택 (모르는 경우, 미선택 가능)","textPreview":"업무 내용을 자연어로 입력 |  사업장과 업무 유형 선택 (모르는 경우, 미선택 가능)","textChars":47,"textLines":2,"bbox":[621.98,152.99,443.16,55.74]}
+{"kind":"textbox","id":"sh/6x8rahk3","slide":4,"name":"TextBox 51","text":" 관련 규정, 지침 해석 → 업무 프로세스 안내\n 주관(협업) 부서 세부내용 확인 → 요청부서 선택","textPreview":"관련 규정, 지침 해석 → 업무 프로세스 안내 |  주관(협업) 부서 세부내용 확인 → 요청부서 선택","textChars":55,"textLines":2,"bbox":[621.98,237.57,430.59,55.74]}
+{"kind":"textbox","id":"sh/7ih83mlo","slide":4,"name":"TextBox 52","text":" 요청 내용을 바탕으로 협업 메일 초안 작성\n 사용자가 내용 수정(보완) 후, 메일 발송\n 담당 부서의 회신 완료까지 진행 현황 확인","textPreview":"요청 내용을 바탕으로 협업 메일 초안 작성 |  사용자가 내용 수정(보완) 후, 메일 발송 |  담당 부서의 회신 완료까지 진행 현황 확인","textChars":74,"textLines":3,"bbox":[621.98,315.4,430.59,80.78]}
+{"kind":"shape","id":"sh/ulsrehkz","slide":4,"name":"직선 연결선 55","bbox":[75.36,551.8,887.58,0]}
+{"kind":"shape","id":"sh/x03ahcbe","slide":4,"name":"사각형: 둥근 모서리 85","bbox":[29.31,498.14,984.03,174.95]}
+{"kind":"textbox","id":"sh/xsfqxs36","slide":4,"name":"TextBox 58","text":"업무 탐색 간소화","textPreview":"업무 탐색 간소화","textChars":9,"textLines":1,"bbox":[43.05,514.22,285.02,32.31]}
+{"kind":"textbox","id":"sh/velcrqpk","slide":4,"name":"TextBox 74","text":"자연어로 업무 상황 입력","textPreview":"자연어로 업무 상황 입력","textChars":13,"textLines":1,"bbox":[30.19,571.81,310.74,30.7]}
+{"kind":"textbox","id":"sh/gfudkvq5","slide":4,"name":"TextBox 75","text":"별도 메뉴 서치 부담 감소","textPreview":"별도 메뉴 서치 부담 감소","textChars":14,"textLines":1,"bbox":[30.19,622.53,310.74,30.7]}
+{"kind":"textbox","id":"sh/ihcvml8b","slide":4,"name":"TextBox 77","text":"추천 부서와 업무분장 근거 확인","textPreview":"추천 부서와 업무분장 근거 확인","textChars":17,"textLines":1,"bbox":[346.56,570.82,292.81,31.69]}
+{"kind":"textbox","id":"sh/3ilwvqpw","slide":4,"name":"TextBox 78","text":"추천 이유와 책임업무 확인","textPreview":"추천 이유와 책임업무 확인","textChars":14,"textLines":1,"bbox":[346.56,622.53,292.81,30.7]}
+{"kind":"textbox","id":"sh/29srixcr","slide":4,"name":"TextBox 80","text":"검토 요청 초안 작성 및 진행현황 확인","textPreview":"검토 요청 초안 작성 및 진행현황 확인","textChars":21,"textLines":1,"bbox":[671.25,571.81,303.21,30.7]}
+{"kind":"textbox","id":"sh/pcjadsb2","slide":4,"name":"TextBox 81","text":"사용자가 내용 확인 및 수정 후 요청","textPreview":"사용자가 내용 확인 및 수정 후 요청","textChars":20,"textLines":1,"bbox":[667.48,622.53,310.74,30.7]}
+{"kind":"textbox","id":"sh/bylsf2t8","slide":4,"name":"TextBox 83","text":"근거 기반 안내","textPreview":"근거 기반 안내","textChars":8,"textLines":1,"bbox":[350.45,514.22,285.02,32.31]}
+{"kind":"textbox","id":"sh/axsrmxcn","slide":4,"name":"TextBox 84","text":"협업 요청 연결","textPreview":"협업 요청 연결","textChars":8,"textLines":1,"bbox":[680.34,511.69,285.02,32.31]}
+{"kind":"textbox","id":"sh/czu9o7ut","slide":4,"name":"직사각형 86","text":"주요 기능 및 기대효과","textPreview":"주요 기능 및 기대효과","textChars":12,"textLines":1,"bbox":[58.4,441.73,827.94,41.99]}
+{"kind":"shape","id":"sh/y1crqhcz","slide":4,"name":"모서리가 둥근 직사각형 320","bbox":[32.59,453.28,20.4,18.9]}
+{"kind":"textbox","id":"sh/qhcb6l47","slide":4,"name":"직사각형 44","text":"『업무 지침 네비게이터』 주요 기능 구현 결과","textPreview":"『업무 지침 네비게이터』 주요 기능 구현 결과","textChars":25,"textLines":1,"bbox":[58.4,73.72,553.47,41.99]}
+{"kind":"shape","id":"sh/sjut8vmd","slide":4,"name":"모서리가 둥근 직사각형 320","bbox":[32.59,86.36,20.4,18.9]}
+{"kind":"image","id":"im/j6t0fu10","slide":4,"name":"그림 2","bbox":[28.6,139.81,418.35,262.01]}
+{"kind":"image","id":"im/i5kz6pkf","slide":4,"name":"그래픽 53","bbox":[514.9,190.69,38.07,65.57]}
+{"kind":"image","id":"im/5sbih4jq","slide":4,"name":"그래픽 54","bbox":[514.9,277.55,38.07,65.57]}
+{"kind":"image","id":"im/4r2h8z2l","slide":4,"name":"그림 89","geometry":"roundRect","bbox":[33.11,453.8,19.45,18.37]}
+{"kind":"image","id":"im/v290balo","slide":4,"name":"그림 47","geometry":"roundRect","bbox":[33.11,86.88,19.45,18.37]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":""}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"4. AI 활용을 위한 첫걸음, 그리고 다음 과제","textShapes":24}
+{"kind":"textbox","id":"sh/z2tcnm5s","slide":5,"name":"TextBox 3","text":"4. AI 활용을 위한 첫걸음, 그리고 다음 과제","textPreview":"4. AI 활용을 위한 첫걸음, 그리고 다음 과제","textChars":27,"textLines":1,"bbox":[19.09,12.48,869.43,42.01]}
+{"kind":"textbox","id":"sh/onmhkzqp","slide":5,"name":"직사각형 46","text":"향후 계획: 데이터 보완과 현업 검증을 거쳐 적용 범위를 단계적으로 확대","textPreview":"향후 계획: 데이터 보완과 현업 검증을 거쳐 적용 범위를 단계적으로 확대","textChars":40,"textLines":1,"bbox":[58.4,395.25,948.49,42.67]}
+{"kind":"shape","id":"sh/qp4jm98v","slide":5,"name":"모서리가 둥근 직사각형 320","bbox":[32.59,406.8,20.4,18.9]}
+{"kind":"textbox","id":"sh/cf2tcr61","slide":5,"name":"TextBox 2","text":"(4/4)","textPreview":"(4/4)","textChars":5,"textLines":1,"bbox":[923.14,29.71,114.57,32.31]}
+{"kind":"textbox","id":"sh/zqxgzupc","slide":5,"name":"직사각형 56","text":"             실제 업무 검증을 바탕으로 서비스의 완성도를 높이고, 효과가 확인된 업무부터 적용 범위를 확대","textPreview":"실제 업무 검증을 바탕으로 서비스의 완성도를 높이고, 효과가 확인된 업무부터 적용 범위를 확대","textChars":65,"textLines":1,"bbox":[39.93,643.88,975.28,53.05]}
+{"kind":"shape","id":"sh/s7u5crud","slide":5,"name":"타원 60","bbox":[50.72,647.76,43.8,45.3]}
+{"kind":"shape","id":"sh/65cnahc7","slide":5,"name":"화살표: 오른쪽 62","bbox":[40.79,649.89,53.5,41.03]}
+{"kind":"shape","id":"sh/kjelony9","slide":5,"name":"직선 연결선 35","bbox":[37.01,478.86,976.34,0]}
+{"kind":"textbox","id":"sh/zmlk3yhk","slide":5,"name":"TextBox 38","text":"단기 ㅣ","textPreview":"단기 ㅣ","textChars":4,"textLines":1,"bbox":[38.08,441.6,95.1,32.31]}
+{"kind":"textbox","id":"sh/m583eds3","slide":5,"name":"TextBox 69","text":"기반 보완","textPreview":"기반 보완","textChars":5,"textLines":1,"bbox":[104.37,441.6,225.92,32.31]}
+{"kind":"textbox","id":"sh/yho3atsr","slide":5,"name":"TextBox 73","text":"중기 ㅣ","textPreview":"중기 ㅣ","textChars":4,"textLines":1,"bbox":[347.8,441.6,95.1,32.31]}
+{"kind":"textbox","id":"sh/zihk3ytc","slide":5,"name":"TextBox 74","text":"현업 검증","textPreview":"현업 검증","textChars":5,"textLines":1,"bbox":[414.08,441.6,225.92,32.31]}
+{"kind":"textbox","id":"sh/lkz258bi","slide":5,"name":"TextBox 76","text":"향후 ㅣ","textPreview":"향후 ㅣ","textChars":4,"textLines":1,"bbox":[721.14,441.6,95.1,32.31]}
+{"kind":"textbox","id":"sh/ids3mxsb","slide":5,"name":"TextBox 77","text":"단계적 확대","textPreview":"단계적 확대","textChars":6,"textLines":1,"bbox":[787.43,441.6,225.92,32.31]}
+{"kind":"textbox","id":"sh/5sf2xs3u","slide":5,"name":"TextBox 85","text":"대표 3~5개 부서의 업무 데이터 정비","textPreview":"대표 3~5개 부서의 업무 데이터 정비","textChars":21,"textLines":1,"bbox":[37.83,494.5,310.74,30.7]}
+{"kind":"textbox","id":"sh/v2dkrils","slide":5,"name":"TextBox 87","text":"명확한 업무부터 핵심 기능 검증","textPreview":"명확한 업무부터 핵심 기능 검증","textChars":17,"textLines":1,"bbox":[37.83,539.85,310.74,30.7]}
+{"kind":"textbox","id":"sh/u14jydk7","slide":5,"name":"TextBox 88","text":"검색 결과의 정확성과 화면 사용성 개선","textPreview":"검색 결과의 정확성과 화면 사용성 개선","textChars":21,"textLines":1,"bbox":[37.83,586.7,333.6,30.7]}
+{"kind":"textbox","id":"sh/0vi9cfet","slide":5,"name":"TextBox 89","text":"과제제안자와 실제 담당자 대상 소규모 시범 운영","textPreview":"과제제안자와 실제 담당자 대상 소규모 시범 운영","textChars":26,"textLines":1,"bbox":[349.83,494.5,381.25,30.7]}
+{"kind":"textbox","id":"sh/lwrqlkfe","slide":5,"name":"TextBox 90","text":"시범 대상 업무의 문서 및 용어 기준 정리","textPreview":"시범 대상 업무의 문서 및 용어 기준 정리","textChars":23,"textLines":1,"bbox":[349.83,539.85,362.17,30.7]}
+{"kind":"textbox","id":"sh/yt0ra5wn","slide":5,"name":"TextBox 91","text":"사용자 의견 반영해 안내 방식 보완","textPreview":"사용자 의견 반영해 안내 방식 보완","textChars":19,"textLines":1,"bbox":[349.83,586.7,333.6,30.7]}
+{"kind":"textbox","id":"sh/zu98jax8","slide":5,"name":"TextBox 92","text":"검증된 업무 중심 적용 범위 확대","textPreview":"검증된 업무 중심 적용 범위 확대","textChars":18,"textLines":1,"bbox":[721.14,494.5,280.35,30.7]}
+{"kind":"textbox","id":"sh/8z29gfep","slide":5,"name":"TextBox 93","text":"데이터 관리 및 최신화 체계 검토","textPreview":"데이터 관리 및 최신화 체계 검토","textChars":18,"textLines":1,"bbox":[721.14,539.85,310.74,30.7]}
+{"kind":"textbox","id":"sh/9kbqpkfa","slide":5,"name":"TextBox 94","text":"사규 앱(사내 시스템)과 연계 가능성 검토","textPreview":"사규 앱(사내 시스템)과 연계 가능성 검토","textChars":23,"textLines":1,"bbox":[721.14,586.7,333.6,30.7]}
+{"kind":"shape","id":"sh/ji5kf2ho","slide":5,"name":"사각형: 둥근 모서리 34","bbox":[33.11,142.45,486.89,231.74]}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":5,"name":"사각형: 둥근 모서리 1","text":"이번 교육과 프로젝트에서 얻은 것 ","textPreview":"이번 교육과 프로젝트에서 얻은 것","textChars":19,"textLines":1,"bbox":[101.1,128.45,352.72,33.01]}
+{"kind":"shape","id":"sh/5kn2hszu","slide":5,"name":"사각형: 둥근 모서리 36","bbox":[526.45,142.45,486.89,231.74]}
+{"kind":"textbox","id":"sh/e1sjatgz","slide":5,"name":"사각형: 둥근 모서리 37","text":"앞으로 보완할 점","textPreview":"앞으로 보완할 점","textChars":9,"textLines":1,"bbox":[594.44,128.45,352.72,33.01]}
+{"kind":"textbox","id":"sh/fid07u98","slide":5,"name":"TextBox 39","text":" 업무 문제를 AI 관점에서 다시 바라보는 경험\n Python 기초, VS Code, GitHub, 랭체인, RAG 등\n  새로운 개념 학습 \n 학습한 개념을 실제 웹 서비스 구현에 활용\n 데이터와 검색 결과를 검증하며 AI 구동방식 이해","textPreview":"업무 문제를 AI 관점에서 다시 바라보는 경험 |  Python 기초, VS Code, GitHub, 랭체인, RAG 등 |   새로운 개념 학습  |  학습한 개념을 실제 웹 서비스 구현에 활용 |  데이터와 검색 결과를 검증하며 AI 구동방식 이해","textChars":133,"textLines":5,"bbox":[33.8,179.76,479.65,169.91]}
+{"kind":"textbox","id":"sh/ehkzepsn","slide":5,"name":"TextBox 40","text":" 회사 지침, 규정, 프로세스 데이터 추가 확보\n 실제 업무 데이터 기반 검증\n 다양한 업무 상황에 대한 추천 정확성 확인\n RAG와 검색 품질에 대한 추가 학습\n 현업 담당자 의견을 반영한 서비스 개선","textPreview":"회사 지침, 규정, 프로세스 데이터 추가 확보 |  실제 업무 데이터 기반 검증 |  다양한 업무 상황에 대한 추천 정확성 확인 |  RAG와 검색 품질에 대한 추가 학습 |  현업 담당자 의견을 반영한 서비스 개선","textChars":113,"textLines":5,"bbox":[526.55,179.76,479.65,176.64]}
+{"kind":"textbox","id":"sh/1kvi94re","slide":5,"name":"직사각형 41","text":"AI 개념을 적용해 보며 얻은 경험과 앞으로의 과제","textPreview":"AI 개념을 적용해 보며 얻은 경험과 앞으로의 과제","textChars":28,"textLines":1,"bbox":[58.4,73.72,553.47,41.99]}
+{"kind":"shape","id":"sh/3md0bu94","slide":5,"name":"모서리가 둥근 직사각형 320","bbox":[32.59,86.36,20.4,18.9]}
+{"kind":"image","id":"im/hkvahsfy","slide":5,"name":"그림 50","geometry":"roundRect","bbox":[33.11,407.33,19.45,18.37]}
+{"kind":"image","id":"im/gjmt8nyd","slide":5,"name":"그림 45","geometry":"roundRect","bbox":[33.11,86.88,19.45,18.37]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":""}
